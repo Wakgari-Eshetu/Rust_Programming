@@ -17,6 +17,13 @@ impl Rectangle {
     pub fn perimeter(&self) -> f64 {
         2.0 * (self.width + self.height)
     }
+
+    pub fn can_hold(&self, other: &Rectangle) -> bool { // method with more than one parameter.
+        if self.width > other.width && self.height > other.height{
+            return true;
+        }
+        false
+    }
 }
 
 pub struct Circle {
